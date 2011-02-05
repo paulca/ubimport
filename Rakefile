@@ -9,16 +9,23 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
+PKG_FILES = FileList[
+  '[a-zA-Z]*',
+  'bin/**/*',
+  'lib/**/*',
+]
+
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "ubimport"
   gem.homepage = "http://github.com/paulca/ubimport"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Convert Ulster Bank Ireland Bankline CSV files into a format compatible with Xero.com}
+  gem.description = %Q{A useful tool until Xero.com supports Ulster Bank Ireland}
   gem.email = "paul@rslw.com"
   gem.authors = ["Paul Campbell"]
+  gem.files = PKG_FILES.to_a
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
