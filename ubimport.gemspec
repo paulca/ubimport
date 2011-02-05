@@ -29,7 +29,8 @@ Gem::Specification.new do |s|
     "VERSION",
     "bin/ubimport",
     "lib/ub_importer.rb",
-    "lib/ubimport.rb"
+    "lib/ubimport.rb",
+    "ubimport.gemspec"
   ]
   s.homepage = %q{http://github.com/paulca/ubimport}
   s.licenses = ["MIT"]
