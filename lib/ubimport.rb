@@ -1,0 +1,1 @@
+require 'ub_importer'
