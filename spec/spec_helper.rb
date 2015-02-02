@@ -1,1 +1,1 @@
-require 'lib/ub_importer'
+require 'ub_importer'

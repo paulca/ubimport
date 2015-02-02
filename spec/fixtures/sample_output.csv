@@ -1,3 +1,3 @@
-Sort Code,Account Number,Account Alias,Account Short Name,Currency,Account Type,BIC,Bank Name,Branch Name,Date,Narrative #1,Narrative #2,Narrative #3,Narrative #4,Narrative #5,Type,TxType,Amount
-123456,12345678,CAMPBELL P       CUR,CAMPBELL P       CUR,EUR,BUSINESS CURRENT,PABCIE42,Ulster Bank (Republic of Ireland),IRELANDTOWN,29/11/2010,HYPER TINY,UBREBPO00276475,,,,ITL,DEBIT,-900.00
-123456,12345678,CAMPBELL P       CUR,CAMPBELL P       CUR,EUR,BUSINESS CURRENT,PABCIE42,Ulster Bank (Republic of Ireland),IRELANDTOWN,26/11/2010,123456,,,,,,CREDIT,3811.50
+Date,Amount,Description,Reference
+29/11/2010,-900.00,HYPER TINY UBREBPO00276475,UBREBPO00276475
+26/11/2010,3811.50,123456,

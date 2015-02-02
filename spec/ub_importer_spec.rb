@@ -6,32 +6,25 @@ describe UBImporter do
   
   describe "#original_lines" do
     it "should load the file" do
-      importer.should have(3).original_lines
-      importer.should have(3).changed_lines
+      expect(importer.changed_lines.length).to eq(2)
     end
     
     it "should change the last few parts of the first line" do
-      importer.changed_lines.first.length.should == 18
-      importer.changed_lines.first[17].should == 'Amount'
-      importer.changed_lines.first[16].should == 'TxType'
-    end
-    
-    it "should change the last few parts of the second line" do
-      importer.changed_lines[1].length.should == 18
-      importer.changed_lines[1][17].should == '-900.00'
-      importer.changed_lines[1][16].should == 'DEBIT'
+      expect(importer.changed_lines.first.length).to eq(4)
+      expect(importer.changed_lines.first[0]).to eq('29/11/2010')
+      expect(importer.changed_lines.first[1]).to eq('-900.00')
     end
 
-    it "should change the last few parts of the third line" do
-      importer.changed_lines[2].length.should == 18
-      importer.changed_lines[2][17].should == '3811.50'
-      importer.changed_lines[2][16].should == 'CREDIT'
+    it "should change the last few parts of the second line" do
+      expect(importer.changed_lines[1].length).to eq(4)
+      expect(importer.changed_lines[1][0]).to eq('26/11/2010')
+      expect(importer.changed_lines[1][1]).to eq('3811.50')
     end
   end
   
   describe "#output" do
     it "should output the file correctly" do
-      importer.output.should == File.read('spec/fixtures/sample_output.csv')
+      expect(importer.output).to eq(File.read('spec/fixtures/sample_output.csv'))
     end
   end
   
