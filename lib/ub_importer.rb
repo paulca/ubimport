@@ -1,6 +1,3 @@
-require 'rubygems'
-require 'bundler/setup'
-require 'pry'
 require 'smarter_csv'
 
 class UBImporter
